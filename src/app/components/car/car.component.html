@@ -5,15 +5,15 @@
     <thead *ngIf="dataLoaded==true">
         <tr>
             <th>Id</th>
-            <th>Brand Name</th>
-            <th>Color Name</th>
+            <th>Brand Id</th>
+            <th>Color Id</th>
             <th>Car Name</th>
             <th>Model Year</th>
             <th>Daily Price</th>
             <th>Description</th>
         </tr>
     </thead>
-    <tr *ngFor="let car of cars">
+    <tr class="clickable" routerLink="/cars/{{car.id}}" *ngFor="let car of cars">
         <td>{{car.id}}</td>
         <td>{{car.brandName}}</td>
         <td>{{car.colorName}}</td>
